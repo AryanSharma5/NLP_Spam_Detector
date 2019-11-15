@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		body{
+			background-color: white;
+		}
+		h1{
+			text-shadow: 1.5px 1.5px black;
+			color:white;
+			background-color: SlateBlue;
+			/*border: 2px solid white;
+			border-radius: 20px;
+			padding: 10px;
+			margin: auto;
+			margin-left: 500px;
+			margin-right: 500px;*/			
+		}
+		h3{
+			color: SlateBlue;
+			text-shadow: 1px 1px black;
+		}
+		textarea{
+			border:1.5px solid black;
+			border-radius: 12px;
+			overflow: auto;
+		}/*
+		button{
+			color: white;
+			border: 2px solid white;
+			border-radius: 5px;
+		}*/
+		button:hover{
+			color: white;
+			border: 1.5px black;
+			background-color: SlateBlue;
+			border-radius: 5px;	
+		}
+	</style>
+</head>
+<body>
+	<form action="{{url_for('predict')}}" , method="Post">
+		<div style="background-color: SlateBlue;">
+			<h1 align="center"><strong>SPAM DETECTOR</strong></h1>
+			<br>
+			<hr style="color: 1px black;">
+		</div>
+		<br>
+		<br>
+		<div class="container">
+			<h3 >Enter Your Message : </h3>
+			<br>
+			<textarea rows="8" cols="50" name="message"  placeholder="Message"></textarea>
+			<br>
+			<br>
+			<button type="submit" value="predict" style="color: SlateBlue;text-shadow: 1px 1px black;background-color: white;border-radius: 5px; border: 1.5px solid black;margin:auto;padding:10px">predict</button>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		body{
+			background-color: white;
+		}
+		h1{
+			color: white;
+			text-shadow: 1.5px 1.5px black;
+			/*font-size: 30px*/
+			padding:10px;
+			background-color: SlateBlue;
+			/*border:2px solid white;
+			border-radius: 20px;
+			margin-right: 500px;
+			margin-left: 500px;*/
+		}
+	</style>
+</head>
+<body>
+	<div style="background-color: SlateBlue;">
+		<h1 align="center"><strong>RESULT</strong></h1>
+		<br>
+		<hr style="color: red;line-height: 2px">
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		{% if prediction_value == 'empty' %}
+		<h2 style="color: SlateBlue;text-shadow: 1px 1px black;font-size: 40px;">Text Field is Necessary.</h2>
+		{% elif prediction_value[0].lower() == 'spam' %}
+		<h2 style="color: SlateBlue;text-shadow: 1.5px 1.5px black;font-size: 40px;">Message is a SPAM.</h2>
+		{% elif prediction_value[0].lower() == 'ham' %}
+		<h2 style="color: SlateBlue;text-shadow: 1px 1px black;font-size: 40px;">Message is a HAM.</h2>
+		{% endif %}
+	</div>
+</body>
+</html>
